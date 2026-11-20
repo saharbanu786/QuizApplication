@@ -1,0 +1,390 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #2329a5;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar .nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.navbar .nav-link:hover {
+  background-color: #6758db;
+}
+
+/* Home Page */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px; /* Space for Navbar */
+  background-color: #fff;
+  height: 100vh;
+}
+
+.home-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+}
+
+.home h1 {
+  font-size: 2.7rem;
+  color: #2329a5;
+  margin-bottom: 20px;
+}
+
+.home p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Admin Panel */
+.admin-dashboard {
+  padding-top: 100px; /* Space for Navbar */
+}
+
+.admin-content {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-section {
+  margin-bottom: 30px;
+}
+
+.admin-section h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.admin-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start; /* Ensures the items align to the start of the container */
+}
+
+.admin-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px; /* Adds space between cards */
+}
+
+.admin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.admin-card p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+button {
+  margin-right: 10px; /* Adds space between buttons */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #351fe0;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7b69e0;
+}
+
+.logout-btn {
+  margin-top: 20px;
+  background-color: #3a0edb;
+}
+
+.logout-btn:hover {
+  background-color: #5a15ee;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding-top: 80px; /* Slightly smaller padding on mobile */
+  }
+
+  .admin-list {
+    justify-content: center; /* Center the cards on smaller screens */
+  }
+
+  .admin-card {
+    max-width: 100%; /* Full width on mobile */
+    padding: 15px; /* Less padding on smaller screens */
+  }
+}
+
+
+/* Register and Login Page */
+.register-page,
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+}
+
+.form-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1rem;
+  background-color: #2329a5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #5646c1;
+}
+
+/* Quiz Page */
+.quiz-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px; /* Space for Navbar */
+  background-color: #f9f9f9; /* Light background */
+  min-height: 100vh;
+}
+
+.quiz-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 700px; /* Increased max width for better alignment */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.quiz-container h2 {
+  font-size: 2.2rem; /* Slightly larger font for title */
+  color: #2329a5;
+  margin-bottom: 30px; /* Increased margin for better spacing */
+  font-weight: bold;
+}
+
+.quiz-container .question {
+  font-size: 1.4rem; /* Increased size for readability */
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.quiz-container .options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Added more space between options */
+}
+
+.quiz-container button {
+  padding: 15px;
+  font-size: 1.1rem; /* Slightly larger font for readability */
+  background-color: #2329a5;
+  color: white;
+  border: none;
+  border-radius: 8px; /* Slightly rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.quiz-container button:hover {
+  background-color: #5646c1;
+  transform: translateY(-2px); /* Slight hover effect */
+}
+
+.quiz-container .next-btn {
+  margin-top: 20px; /* Spacing between options and next button */
+  padding: 12px 20px;
+  background-color: #2329a5;; /* Green color for 'Next' button */
+  font-weight: bold;
+}
+
+.quiz-container .next-btn:disabled {
+  background-color: #ccc; /* Disable the button with gray color */
+  cursor: not-allowed;
+}
+
+.quiz-container .timer {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.quiz-container .quiz-results {
+  font-size: 1.5rem;
+  color: #2329a5;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.quiz-container .quiz-results p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Scoreboard Page */
+.scoreboard-page {
+  padding-top: 100px; /* Space for Navbar */
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoreboard-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.scoreboard-container h2 {
+  font-size: 2rem;
+  color: #2329a5;
+  margin-bottom: 20px;
+}
+
+/* Scoreboard List */
+.scoreboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Individual Score Item */
+.scoreboard-item {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.scoreboard-item .username {
+  font-weight: bold;
+  color: #333;
+}
+
+.scoreboard-item .score {
+  font-weight: bold;
+  color: #2329a5;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .scoreboard-container {
+    width: 90%;
+  }
+
+  .scoreboard-item {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home-content,
+  .form-container,
+  .quiz-container,
+  .scoreboard-container,
+  .admin-content {
+    width: 90%;
+  }
+
+  .admin-card {
+    width: 100%;
+  }
+
+  .quiz-container button,
+  .form-container button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
